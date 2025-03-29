@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Processamento de Arquivos</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(45,253,114,1) 100%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #ffffff;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+    }
+
+    .mensagem {
+      font-size: 2rem;
+      font-weight: bold;
+      text-align: center;
+      padding: 20px;
+      background-color: rgba(0, 0, 0, 0.2);
+      border-radius: 12px;
+    }
+
+    .pontos::after {
+      content: '';
+      display: inline-block;
+      width: 1em;
+      animation: pontosAnimados 1.5s infinite steps(4);
+    }
+
+    @keyframes pontosAnimados {
+      0%   { content: ''; }
+      25%  { content: '.'; }
+      50%  { content: '..'; }
+      75%  { content: '...'; }
+      100% { content: ''; }
+    }
+  </style>
+</head>
+<body>
+  <div class="mensagem">
+    <span>Aguarde<span class="pontos"></span></span><br />
+    Seus arquivos começaram a ser processados.
+  </div>
+</body>
+</html>
